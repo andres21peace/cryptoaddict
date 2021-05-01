@@ -1,11 +1,12 @@
 const coinInput = document.getElementById('coin');
 const currencyInput = document.getElementById('curr');
-let submit = document.querySelector('#form');
+const submit = document.getElementById('form');
 let request = new XMLHttpRequest();
 const result = document.getElementById('result');
 
 submit.addEventListener('submit', ($event) =>{
-  $event.prevenDefault();
+  $event.preventDefault();
+  
   const coinValue = coinInput.value;
   const currValue = currencyInput.value;
   request.open('GET', 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=' + currValue +'&ids='+ coinValue + '&order=market_cap_desc&per_page=100&page=1&sparkline=false')
