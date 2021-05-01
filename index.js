@@ -4,7 +4,7 @@ const submit = document.getElementById('form');
 let request = new XMLHttpRequest();
 const result = document.getElementById('result');
 
-submit.addEventListener('submit', ($event) =>{
+submit.addEventListener('click', ($event) =>{
   $event.preventDefault();
   
   const coinValue = coinInput.value;
