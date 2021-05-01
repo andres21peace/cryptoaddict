@@ -1,6 +1,6 @@
 const coinInput = document.getElementById('coin');
 const currencyInput = document.getElementById('curr');
-const submit = document.getElementById('form');
+let submit = document.querySelector('#form');
 let request = new XMLHttpRequest();
 const result = document.getElementById('result');
 
